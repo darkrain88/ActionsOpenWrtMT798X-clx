@@ -27,7 +27,7 @@ rm -rf feeds/luci/applications/luci-app-openclash
 git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git feeds/luci/applications/luci-app-openclash
 
 # Nikki / Momo
-#git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git package/custom/nikki
+git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git package/custom/nikki
 #git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-momo.git package/custom/momo
 
 
@@ -36,14 +36,14 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git feeds/luci
 #git clone --depth=1 -b kix https://github.com/QiuSimons/luci-app-daed.git package/custom/daed
 # 添加 vmlinux-btf 模块
 #git clone --depth=1 https://github.com/QiuSimons/vmlinux-btf.git package/custom/vmlinux-btf
-#git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/daede
+git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/daede
 # SSR+
 #git clone --depth=1 https://github.com/fw876/helloworld.git package/custom/ssrp
 
 # 功能插件
 #git clone --depth=1 https://github.com/sirpdboy/luci-app-poweroffdevice.git package/custom/poweroffdevice
 #git clone --depth=1 https://github.com/isalikai/luci-app-owq-wol.git package/custom/owq-wol
-#git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/custom/lucky
+git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/custom/lucky
 git clone --depth=1 https://github.com/sbwml/luci-app-openlist2.git package/custom/openlist2
 
 #git clone --depth=1 https://github.com/sirpdboy/luci-app-watchdog.git package/custom/watchdog
@@ -70,12 +70,12 @@ git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/cu
 # 主题
 #git clone --depth=1 -b openwrt-25.12 https://github.com/sbwml/luci-theme-argon.git package/custom/luci-theme-argon
 #git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon.git package/custom/luci-theme-argon
-#git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora.git package/custom/luci-theme-aurora
-#git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config.git package/custom/luci-app-aurora-config
+git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora.git package/custom/luci-theme-aurora
+git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config.git package/custom/luci-app-aurora-config
 
 # change the default theme:
-sed -i 's/+luci-theme-bootstrap/+luci-theme-argon/g; s/default Bootstrap theme/Argon theme/g' feeds/luci/collections/luci-light/Makefile
-#sed -i 's/+luci-theme-bootstrap/+luci-theme-aurora/g; s/default Bootstrap theme/Aurora theme/g' feeds/luci/collections/luci-light/Makefile
+#sed -i 's/+luci-theme-bootstrap/+luci-theme-argon/g; s/default Bootstrap theme/Argon theme/g' feeds/luci/collections/luci-light/Makefile
+sed -i 's/+luci-theme-bootstrap/+luci-theme-aurora/g; s/default Bootstrap theme/Aurora theme/g' feeds/luci/collections/luci-light/Makefile
 #修改默认主题
 #sed -i "s/luci-theme-bootstrap/luci-theme-$WRT_THEME/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
